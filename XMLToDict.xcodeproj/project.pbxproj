@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEC63817181111D3008EF7FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC63816181111D3008EF7FB /* Cocoa.framework */; };
+		AEC63821181111D3008EF7FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEC6381F181111D3008EF7FB /* InfoPlist.strings */; };
+		AEC63825181111D3008EF7FB /* XMLToDict.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC63824181111D3008EF7FB /* XMLToDict.m */; };
+		AEC6382C181111D3008EF7FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC6382B181111D3008EF7FB /* XCTest.framework */; };
+		AEC6382D181111D3008EF7FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC63816181111D3008EF7FB /* Cocoa.framework */; };
+		AEC63830181111D3008EF7FB /* XMLToDict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC63813181111D3008EF7FB /* XMLToDict.framework */; };
+		AEC63836181111D3008EF7FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEC63834181111D3008EF7FB /* InfoPlist.strings */; };
+		AEC63838181111D3008EF7FB /* XMLToDictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC63837181111D3008EF7FB /* XMLToDictTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEC6382E181111D3008EF7FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEC6380A181111D3008EF7FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC63812181111D3008EF7FB;
+			remoteInfo = XMLToDict;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEC63813181111D3008EF7FB /* XMLToDict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLToDict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC63816181111D3008EF7FB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AEC63819181111D3008EF7FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AEC6381A181111D3008EF7FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AEC6381B181111D3008EF7FB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		AEC6381E181111D3008EF7FB /* XMLToDict-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XMLToDict-Info.plist"; sourceTree = "<group>"; };
+		AEC63820181111D3008EF7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEC63822181111D3008EF7FB /* XMLToDict-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XMLToDict-Prefix.pch"; sourceTree = "<group>"; };
+		AEC63823181111D3008EF7FB /* XMLToDict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLToDict.h; sourceTree = "<group>"; };
+		AEC63824181111D3008EF7FB /* XMLToDict.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLToDict.m; sourceTree = "<group>"; };
+		AEC6382A181111D3008EF7FB /* XMLToDictTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLToDictTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC6382B181111D3008EF7FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AEC63833181111D3008EF7FB /* XMLToDictTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XMLToDictTests-Info.plist"; sourceTree = "<group>"; };
+		AEC63835181111D3008EF7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEC63837181111D3008EF7FB /* XMLToDictTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLToDictTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEC6380F181111D3008EF7FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC63817181111D3008EF7FB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC63827181111D3008EF7FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC6382D181111D3008EF7FB /* Cocoa.framework in Frameworks */,
+				AEC63830181111D3008EF7FB /* XMLToDict.framework in Frameworks */,
+				AEC6382C181111D3008EF7FB /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEC63809181111D3008EF7FB = {
+			isa = PBXGroup;
+			children = (
+				AEC6381C181111D3008EF7FB /* XMLToDict */,
+				AEC63831181111D3008EF7FB /* XMLToDictTests */,
+				AEC63815181111D3008EF7FB /* Frameworks */,
+				AEC63814181111D3008EF7FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEC63814181111D3008EF7FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEC63813181111D3008EF7FB /* XMLToDict.framework */,
+				AEC6382A181111D3008EF7FB /* XMLToDictTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEC63815181111D3008EF7FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC63816181111D3008EF7FB /* Cocoa.framework */,
+				AEC6382B181111D3008EF7FB /* XCTest.framework */,
+				AEC63818181111D3008EF7FB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEC63818181111D3008EF7FB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC63819181111D3008EF7FB /* Foundation.framework */,
+				AEC6381A181111D3008EF7FB /* CoreData.framework */,
+				AEC6381B181111D3008EF7FB /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		AEC6381C181111D3008EF7FB /* XMLToDict */ = {
+			isa = PBXGroup;
+			children = (
+				AEC63823181111D3008EF7FB /* XMLToDict.h */,
+				AEC63824181111D3008EF7FB /* XMLToDict.m */,
+				AEC6381D181111D3008EF7FB /* Supporting Files */,
+			);
+			path = XMLToDict;
+			sourceTree = "<group>";
+		};
+		AEC6381D181111D3008EF7FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC6381E181111D3008EF7FB /* XMLToDict-Info.plist */,
+				AEC6381F181111D3008EF7FB /* InfoPlist.strings */,
+				AEC63822181111D3008EF7FB /* XMLToDict-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEC63831181111D3008EF7FB /* XMLToDictTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEC63837181111D3008EF7FB /* XMLToDictTests.m */,
+				AEC63832181111D3008EF7FB /* Supporting Files */,
+			);
+			path = XMLToDictTests;
+			sourceTree = "<group>";
+		};
+		AEC63832181111D3008EF7FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC63833181111D3008EF7FB /* XMLToDictTests-Info.plist */,
+				AEC63834181111D3008EF7FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AEC63810181111D3008EF7FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AEC63812181111D3008EF7FB /* XMLToDict */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC6383B181111D3008EF7FB /* Build configuration list for PBXNativeTarget "XMLToDict" */;
+			buildPhases = (
+				AEC6380E181111D3008EF7FB /* Sources */,
+				AEC6380F181111D3008EF7FB /* Frameworks */,
+				AEC63810181111D3008EF7FB /* Headers */,
+				AEC63811181111D3008EF7FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMLToDict;
+			productName = XMLToDict;
+			productReference = AEC63813181111D3008EF7FB /* XMLToDict.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEC63829181111D3008EF7FB /* XMLToDictTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC6383E181111D3008EF7FB /* Build configuration list for PBXNativeTarget "XMLToDictTests" */;
+			buildPhases = (
+				AEC63826181111D3008EF7FB /* Sources */,
+				AEC63827181111D3008EF7FB /* Frameworks */,
+				AEC63828181111D3008EF7FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEC6382F181111D3008EF7FB /* PBXTargetDependency */,
+			);
+			name = XMLToDictTests;
+			productName = XMLToDictTests;
+			productReference = AEC6382A181111D3008EF7FB /* XMLToDictTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEC6380A181111D3008EF7FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jonathan Lozinski";
+				TargetAttributes = {
+					AEC63829181111D3008EF7FB = {
+						TestTargetID = AEC63812181111D3008EF7FB;
+					};
+				};
+			};
+			buildConfigurationList = AEC6380D181111D3008EF7FB /* Build configuration list for PBXProject "XMLToDict" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AEC63809181111D3008EF7FB;
+			productRefGroup = AEC63814181111D3008EF7FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEC63812181111D3008EF7FB /* XMLToDict */,
+				AEC63829181111D3008EF7FB /* XMLToDictTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEC63811181111D3008EF7FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC63821181111D3008EF7FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC63828181111D3008EF7FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC63836181111D3008EF7FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEC6380E181111D3008EF7FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC63825181111D3008EF7FB /* XMLToDict.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC63826181111D3008EF7FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC63838181111D3008EF7FB /* XMLToDictTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEC6382F181111D3008EF7FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC63812181111D3008EF7FB /* XMLToDict */;
+			targetProxy = AEC6382E181111D3008EF7FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEC6381F181111D3008EF7FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC63820181111D3008EF7FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AEC63834181111D3008EF7FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC63835181111D3008EF7FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEC63839181111D3008EF7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AEC6383A181111D3008EF7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AEC6383C181111D3008EF7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XMLToDict/XMLToDict-Prefix.pch";
+				INFOPLIST_FILE = "XMLToDict/XMLToDict-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		AEC6383D181111D3008EF7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XMLToDict/XMLToDict-Prefix.pch";
+				INFOPLIST_FILE = "XMLToDict/XMLToDict-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		AEC6383F181111D3008EF7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XMLToDict.framework/Versions/A/XMLToDict";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XMLToDict/XMLToDict-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "XMLToDictTests/XMLToDictTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AEC63840181111D3008EF7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XMLToDict.framework/Versions/A/XMLToDict";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XMLToDict/XMLToDict-Prefix.pch";
+				INFOPLIST_FILE = "XMLToDictTests/XMLToDictTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEC6380D181111D3008EF7FB /* Build configuration list for PBXProject "XMLToDict" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC63839181111D3008EF7FB /* Debug */,
+				AEC6383A181111D3008EF7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEC6383B181111D3008EF7FB /* Build configuration list for PBXNativeTarget "XMLToDict" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC6383C181111D3008EF7FB /* Debug */,
+				AEC6383D181111D3008EF7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AEC6383E181111D3008EF7FB /* Build configuration list for PBXNativeTarget "XMLToDictTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC6383F181111D3008EF7FB /* Debug */,
+				AEC63840181111D3008EF7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEC6380A181111D3008EF7FB /* Project object */;
+}
