@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XMLToDict : NSObject
+@interface XMLToDict : NSObject <NSXMLParserDelegate>
+
+-(XMLToDict *)initWithRoot:(NSMutableDictionary *)root;
+
++(NSDictionary *)dictFromData:(NSData *)data;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "XMLToDict.h"
 
 @interface XMLToDictTests : XCTestCase
 
@@ -26,9 +27,64 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testNodeMapstoItsText
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSString *xml = @"<node>the text</node>";
+    NSData *data = [xml dataUsingEncoding:NSUTF16StringEncoding];
+    NSDictionary *result = [XMLToDict dictFromData:data];
+    
+    XCTAssertEqualObjects(
+                          @"the text",
+                          [result objectForKey:@"node"],
+                          @"Expected text for node key");
+}
+
+-(void)testNodeMapsMultilineText
+{
+    NSString *xml = @"<multiline>this text\nhas lines</multiline>";
+    NSData *data = [xml dataUsingEncoding:NSUTF16StringEncoding];
+    NSDictionary *result = [XMLToDict dictFromData:data];
+    
+    XCTAssertEqualObjects(
+                          @"this text\nhas lines",
+                          [result objectForKey:@"multiline"],
+                          @"Expected multiline");
+}
+
+-(void)testNestsNodesUnderElement
+{
+    NSString *xml = @"<node><child>text</child></node>";
+    NSData *data = [xml dataUsingEncoding:NSUTF16StringEncoding];
+    NSDictionary *result = [XMLToDict dictFromData:data];
+    
+    NSDictionary *node = [result objectForKey:@"node"];
+    XCTAssertEqualObjects(
+                          @"text",
+                          [node objectForKey:@"child"],
+                          @"Expected nested child text");
+}
+
+-(void)testCreatesArrayOfRepeatedNodes
+{
+    NSString *xml = @"<node><child>one</child><child>two</child><child>three</child></node>";
+    NSData *data = [xml dataUsingEncoding:NSUTF16StringEncoding];
+    NSDictionary *result = [XMLToDict dictFromData:data];
+    
+    NSDictionary *node = [result objectForKey:@"node"];
+    NSArray *children = [node objectForKey:@"child"];
+    NSLog(@"Node: %@", result);
+    XCTAssertEqualObjects(
+                          @"one",
+                          children[0],
+                          @"Expected item one");
+    XCTAssertEqualObjects(
+                          @"two",
+                          children[1],
+                          @"Expected item two");
+    XCTAssertEqualObjects(
+                          @"three",
+                          children[2],
+                          @"Expected item three");
 }
 
 @end
