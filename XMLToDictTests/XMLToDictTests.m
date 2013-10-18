@@ -86,4 +86,25 @@
                           @"Expected item three");
 }
 
+-(void)testDictionaryContainsAttributes
+{
+    NSString *xml = @"<node foo='bar' baz='qux'>this &amp; that</node>";
+    NSData *data = [xml dataUsingEncoding:NSUTF16StringEncoding];
+    NSDictionary *result = [XMLToDict dictFromData:data];
+    
+    NSDictionary *node = [result objectForKey:@"node"];
+    XCTAssertEqualObjects(
+                          @"bar",
+                          [node objectForKey:@"foo"],
+                          @"Expected item attr foo=bar");
+    XCTAssertEqualObjects(
+                          @"qux",
+                          [node objectForKey:@"baz"],
+                          @"Expected item attr baz=qux");
+    XCTAssertEqualObjects(
+                          @"this & that",
+                          [node objectForKey:@"text"],
+                          @"Expected item text in 'text'");
+}
+
 @end

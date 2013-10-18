@@ -36,7 +36,7 @@
                                          attributes:(NSDictionary *)attributeDict {
     self.text = [[NSMutableString alloc] init];
     NSMutableDictionary *current = [self.stack lastObject];
-    NSMutableDictionary *child = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *child = [[NSMutableDictionary alloc] initWithDictionary:attributeDict];
     id item = [current objectForKey:elementName];
     //Element collides with previously Parsed
     if(item) {
@@ -66,7 +66,7 @@
                                     qualifiedName:(NSString *)qName {
 
     //Pop item being parsed off the stack
-    id child = [self.stack lastObject];
+    NSMutableDictionary *child = [self.stack lastObject];
     [self.stack removeLastObject];
     
     //Check to see how to close off this node (if there's text)
@@ -84,8 +84,12 @@
             // Replace item in parent
             [parent setObject:self.text forKey:elementName];
         }
+    } else {
+        if(self.text) {
+            [child setObject:self.text forKey:@"text"];
+        }
     }
-
+    self.text = nil;
 }
 
 @end
