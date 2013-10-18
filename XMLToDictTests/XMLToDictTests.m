@@ -72,7 +72,6 @@
     
     NSDictionary *node = [result objectForKey:@"node"];
     NSArray *children = [node objectForKey:@"child"];
-    NSLog(@"Node: %@", result);
     XCTAssertEqualObjects(
                           @"one",
                           children[0],

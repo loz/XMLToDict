@@ -38,18 +38,22 @@
     NSMutableDictionary *current = [self.stack lastObject];
     NSMutableDictionary *child = [[NSMutableDictionary alloc] init];
     id item = [current objectForKey:elementName];
+    //Element collides with previously Parsed
     if(item) {
-        NSLog(@"Duplicate Item: %@ in %@", elementName, current);
         if ([item isKindOfClass:[NSMutableArray class]]) {
+            //We already know this is a collection, just add it
             NSMutableArray *items = item;
             [items addObject:child];
         } else {
+            //Replace existing will a collection of it and the new one
             NSMutableArray *items = [[NSMutableArray alloc] initWithArray:@[item, child]];
             [current setObject:items forKey:elementName];
         }
     } else {
+        //New node
         [current setObject:child forKey:elementName];
     }
+    //New node is current stack item
     [self.stack addObject:child];
 }
 
@@ -61,15 +65,27 @@
                                      namespaceURI:(NSString *)namespaceURI
                                     qualifiedName:(NSString *)qName {
 
+    //Pop item being parsed off the stack
     id child = [self.stack lastObject];
     [self.stack removeLastObject];
-    NSMutableDictionary *parent = [self.stack lastObject];
     
-    if([child isKindOfClass:[NSMutableDictionary class]]) {
-        if ([child count] == 0) {
+    //Check to see how to close off this node (if there's text)
+    NSMutableDictionary *parent = [self.stack lastObject];
+    id item = [parent objectForKey:elementName];
+    if ([child count] == 0) {
+        //Just a TEXT node
+        
+        if ([item isKindOfClass:[NSMutableArray class]]) {
+            // Replace item in collection
+            NSMutableArray *items = (NSMutableArray *)item;
+            NSUInteger childLocation = [items indexOfObject:child];
+            [items setObject:self.text atIndexedSubscript:childLocation];
+        } else {
+            // Replace item in parent
             [parent setObject:self.text forKey:elementName];
         }
     }
+
 }
 
 @end
