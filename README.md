@@ -40,6 +40,7 @@ JSON:
 {
   'doc' => {
     'list' => {
+      'of' => 'items',
       'item' => [
         'one',
         'two',
